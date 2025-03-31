@@ -1,13 +1,14 @@
 import 'package:go_router/go_router.dart';
 import 'package:tallergorouter/future/future_view.dart';
-import 'package:tallergorouter/profesionales/profesional_detail_view.dart';
-import 'package:tallergorouter/profesionales/profesional_list_view.dart';
+
 import 'package:tallergorouter/views/ciclo_vida/ciclo_vida_screen.dart';
 import 'package:tallergorouter/paso_parametros/detalle_screen.dart';
 import 'package:tallergorouter/paso_parametros/paso_parametros_screen.dart';
+import 'package:tallergorouter/views/comidas/comida_list_view.dart';
 import 'package:tallergorouter/views/grid_view.dart';
 import 'package:tallergorouter/views/home_view.dart';
 import 'package:tallergorouter/views/isolate/isolate_view.dart';
+import 'package:tallergorouter/views/comidas/comida_detail_view.dart';
 import 'package:tallergorouter/views/tabbar_view.dart';
 import 'package:tallergorouter/views/timer/timer_view.dart';
 
@@ -65,16 +66,16 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const IsolateView(),
     ),
     GoRoute(
-      path: '/profesional',
-      name: 'profesionales',
-      builder: (context, state) => const ProfesionalListView(),
+      path: '/meal',
+      name: 'meals',
+      builder: (context, state) => const MealListView(),
     ),
     GoRoute(
-      path: '/profesional/:name',
-      name: 'profesionalDetail',
+      path: '/meals/:idMeal',
+      name: 'mealDetail',
       builder:
           (context, state) =>
-        ProfesionalDetailView(name: state.pathParameters['name']!),
+              MealDetailView(idMeal: state.pathParameters['idMeal']!),
     ),
   ],
 );

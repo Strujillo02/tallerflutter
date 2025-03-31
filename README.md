@@ -38,3 +38,17 @@ dispose(): Se ejecuta cuando el widget se elimina de la memoria, útil para libe
 * En el timer_view inicia un contador en 0, tiene un metodo que es iniciarTemporizador que aumenta el contador en 1 cada segundo, reiniciarTemporizador que este pone a el contador en 0, y pausarTemporizador cancela en temporizador para que no siga contando, y son llamados en botones para su ejecucion.
 
 * Se agregaron las nuevas funcionalidades al custom_drawer
+
+# TALLER 3 
+
+* Se trabajo con la api de Meal y se modelo tal cual como los datos aparecen en el json, los atributos del objeto fueron: idMeal, strMeal y trMealThumb.
+
+* Se creo el service, que es este es el que trae los datos de la API, y se los pasa a la vista, ahi hay 2 metodos, el getmeals trae lista todas las comidas, y el getmealbyid solo trae uno por id. Utilizando el modelo
+
+* Comida_list_view muestra todas las comidas con el metodo getmeals del service y llama al modelo.
+
+* Comida_detail_view muestra una comida consultda por id con el metodo getmealbyid del service y llama al modelo.
+
+* para finalizar se llama las views desde el app_router.
+
+

@@ -101,13 +101,13 @@ class CustomDrawer extends StatelessWidget {
               context.goNamed('isolate');
             },
           ),
-          /* ListTile(
+          ListTile(
             leading: Icon(Icons.catching_pokemon),
-            title: Text('profesionales'),
+            title: Text('comidas'),
             onTap: () {
-              context.goNamed('profesionales');
+              context.goNamed('meals');
             },
-          ),*/
+          ),
         ],
       ),
     );
