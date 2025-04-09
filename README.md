@@ -51,4 +51,15 @@ dispose(): Se ejecuta cuando el widget se elimina de la memoria, útil para libe
 
 * para finalizar se llama las views desde el app_router.
 
+# TALLER 4
+
+* Se agrego el crud donde tiene el crear, eliminar, listar todos, listar por id y actualizar
+
+* El crear recibe el objeto por json y conecta a la api por medio de un metodo post
+
+* El update recibe un objeto con el id y llama al metodo modificar y este ees por el metodo post
+
+* El listar por id le paso id y me trae un objeto de tipo establecimiento y este lo trae por medio del metodo get al igual que el metodo listar todos
+
+* El eliminar elimina por id, entonces solo le paso este, y lo hace por medio del Del
 
