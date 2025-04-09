@@ -5,6 +5,9 @@ import 'package:tallergorouter/views/ciclo_vida/ciclo_vida_screen.dart';
 import 'package:tallergorouter/paso_parametros/detalle_screen.dart';
 import 'package:tallergorouter/paso_parametros/paso_parametros_screen.dart';
 import 'package:tallergorouter/views/comidas/comida_list_view.dart';
+import 'package:tallergorouter/views/establecimientos/establecimiento_create_view.dart';
+import 'package:tallergorouter/views/establecimientos/establecimiento_edit_view.dart';
+import 'package:tallergorouter/views/establecimientos/establecimientos_list_view.dart';
 import 'package:tallergorouter/views/grid_view.dart';
 import 'package:tallergorouter/views/home_view.dart';
 import 'package:tallergorouter/views/isolate/isolate_view.dart';
@@ -76,6 +79,26 @@ final GoRouter appRouter = GoRouter(
       builder:
           (context, state) =>
               MealDetailView(idMeal: state.pathParameters['idMeal']!),
+    ),
+    GoRoute(
+      path: '/establecimientos',
+      name: 'establecimientos',
+      builder: (context, state) => const EstablecimientosListView(),
+    ),
+    //!Ruta para editar de un establecimiento
+    GoRoute(
+      path: '/establecimientos/edit/:id',
+      builder: (context, state) {
+        //*se captura el id del establecimiento
+        final id = int.parse(state.pathParameters['id']!);
+        return EstablecimientoEditView(id: id);
+      },
+    ),
+    GoRoute(
+      path: '/establecimientos/create',
+      name: 'establecimientoCreate',
+      // Se usa el nombre de la ruta para navegar a la vista de crear establecimiento
+      builder: (context, state) => const EstablecimientoCreateView(),
     ),
   ],
 );
